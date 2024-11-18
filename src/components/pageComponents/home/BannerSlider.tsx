@@ -7,8 +7,8 @@ import Image, { StaticImageData } from "next/image"
 
 
 type PropType = {
-   height:string;
-   width:string;
+   height?:string;
+   width?:string;
    data:StaticImageData[];
    preview:number,
    spacing?:number,

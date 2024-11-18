@@ -5,7 +5,7 @@ import logo from "../../utils/Image/logo.png"
 export default function Footer() {
   return (
     <>
-    <div className='bg-[#101010] text-white'>
+    <div className='bg-[#304146] text-white'>
       <div className='grid grid-cols-4 p-3'>
         <div className='col-span-4 md:col-span-2'>
              <Image height={200} width={200} src={logo} alt='logo'/>

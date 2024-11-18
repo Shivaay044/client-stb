@@ -12,6 +12,19 @@ import benifit_3 from "@/utils/Image/working-with-servers_335657-2440.avif";
 import tvBannerwithChannel from "@/utils/Image/tvBannerwithChannel.png"
 import Image, { StaticImageData } from 'next/image';
 import { IoMdCheckboxOutline } from "react-icons/io";
+import type_of_chnl from "@/utils/Image/type_of _chnl.jpg";
+// import chat1 from "@/utils/Image/whatsappchat/chat1.jpg";
+import chat2 from "@/utils/Image/whatsappchat/chat2.jpg";
+import chat3 from "@/utils/Image/whatsappchat/chat3.jpg";
+import chat4 from "@/utils/Image/whatsappchat/chat4.jpg";
+import chat5 from "@/utils/Image/whatsappchat/chat5.jpg";
+
+type Pricing = {
+  orgPrice: string;
+  disPrice: string;
+  duration: string;
+  benifits: string[]
+}
 
 
 export default function Landing() {
@@ -34,11 +47,84 @@ export default function Landing() {
     poster_2,
   ]
 
+  const Pricing: Pricing[] = [
+    {
+      orgPrice: "$19",
+      disPrice: "$11",
+      duration: "1 Month",
+      benifits: [
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+      ]
+    },
+    {
+      orgPrice: "$49.99",
+      disPrice: "$29.99",
+      duration: "3 Month",
+      benifits: [
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+      ]
+    },
+    {
+      orgPrice: "$79.99",
+      disPrice: "$47.99",
+      duration: "6 Month",
+      benifits: [
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+      ]
+    },
+    {
+      orgPrice: "$119.99",
+      disPrice: "$71.99",
+      duration: "12 Month",
+      benifits: [
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+      ]
+    },
+    {
+      orgPrice: "$129.99",
+      disPrice: "$77.99",
+      duration: "12 month All TV + Adult Section",
+      benifits: [
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+        "+ 18000 Live IPTV Channels",
+      ]
+    }
+  ]
+
   return (<>
     <div className='relative w-full h-screen'>
       <div className={`${style.landingPageImg} w-full h-full absolute`}>
       </div>
-      <div className='z-100 bg-[rgba(0,0,0,0.4)] absolute w-full h-full flex items-center'>
+      <div className='z-100 bg-[rgba(0,0,0,0.4)] absolute w-full h-full flex items-center mt-12 md:mt-0'>
         <div className='text-center'>
           <p className='md:text-4xl text-2xl font-bold text-white'>PREMIUM <span className='text-[#F14E00] italic'>
             <Typewriter
@@ -89,7 +175,7 @@ export default function Landing() {
       duration={600} />
     <p className='text-sm md:text-3xl text-white font-semibold p-4 text-center'>Quick tv Premium IPTV Service – Exceptional Entertainment at Its Best</p>
     <p className='text-sm md:text-2xl font-semibold text-center text-[#F14E00]'>Continuously Updating</p>
-    <div className='grid grid-cols-3 mt-12'>
+    <div className='flex flex-wrap justify-center lg:flex-nowrap gap-6 mt-12'>
       <div>
         <Image className='m-auto h-28' src={benifit_1} alt='' />
         <p className='text-sm md:text-xl text-white font-semibold text-center'>High-Speed and Reliable Streaming Technology</p>
@@ -112,9 +198,9 @@ export default function Landing() {
         </p>
       </div>
     </div>
-    <div className='flex flex-row-reverse mt-12'>
-      <Image alt='' className='h-[30%] w-[40%] me-14' src={tvBannerwithChannel} />
-      <div className='mt-12 p-1 w-[60%]'>
+    <div className='flex flex-row-reverse mt-8 flex-col lg:flex-row justify-center items-center w-[95%] mx-auto'>
+      <Image alt='' src={tvBannerwithChannel} />
+      <div className='mt-12 p-1 lg:w-[60%]'>
         <p className='text-sm md:text-3xl text-white font-semibold text-center'>
           Quick tv Premium IPTV Service – Exceptional Entertainment at Its Best
         </p>
@@ -128,85 +214,74 @@ export default function Landing() {
         </div>
       </div>
     </div>
-    <div className='flex flex-col items-center w-full border'>
+    <div className='flex flex-col items-center'>
       <p className='text-[#F14E00] text-sm md:text-3xl font-semibold p-4 text-center'>
         Shop Risk-Free with Our 14-Day Money-Back Guarantee!
       </p>
-      <div className='flex gap-20'>
-        <div className='bg-white hover:border border-8 inset-3 border-[#F14E00] rounded-3xl py-8 text-center '>
-          <p className='text-[#F14E00] text-2xl font-semibold'>PREMIUM IPTV</p>
-          <p className='text-4xl font-[800]'>1 Month</p>
-          <div className='mt-2 bg-[#CBDCEB] w-full'>
-            <span className='line-through text-2xl mx-2'>$19.9</span>
-            <span className='text-[#F14E00] text-3xl'>$13.9</span>
-            <p className='text-slate-600'>Starting From</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 p-4">
+        {Pricing.map((item: Pricing, idx) => (
+          <div
+            key={idx}
+            className="mx-auto bg-white border border-[#F14E00] rounded-3xl py-4 text-center box-border hover:shadow-[0_0_0_8px_#F14E00] w-full max-w-xs">
+            <p className="text-[#F14E00] text-xl font-semibold">PREMIUM IPTV</p>
+            <p className="flex items-center justify-center text-md h-14 m-1 font-[900]">{item.duration}</p>
+            <div className="mt-2 bg-[#CBDCEB] w-full py-2">
+              <span className="line-through text-xl mx-2">{item.orgPrice}</span>
+              <span className="text-[#F14E00] text-2xl">{item.disPrice}</span>
+              <p className="text-slate-600">Starting From</p>
+            </div>
+            <ul className=" mt-4 flex flex-col gap-1">
+              {item.benifits.map((description: string, idx: number) => (
+                <li key={idx} className="flex items-center justify-center gap-1 text-xs p-1">
+                  <IoMdCheckboxOutline className="text-[#F14E00]" />
+                  {description}
+                </li>
+              ))}
+            </ul>
+            <button
+              type="button"
+              className="mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-6 py-2.5 dark:focus:ring-blue-800">
+              Buy Now
+            </button>
           </div>
-          <ul className='mx-4 mt-4 flex flex-col gap-1'>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-          </ul>
-        </div>
-        <div className='bg-white border border-[#F14E00]'>
-          <p className='text-[#F14E00] text-2xl font-semibold'>PREMIUM IPTV</p>
-          <p className='text-4xl font-[800]'>1 Month</p>
-          <div>
-            <span>$19.9</span>
-            <span>$13.9</span>
-            <p>Starting From</p>
-          </div>
-          <ul>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline className='text-[#F14E00]' /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-          </ul>
-        </div>
-        <div className='bg-white border border-[#F14E00]'>
-          <p className='text-[#F14E00] text-2xl font-semibold'>PREMIUM IPTV</p>
-          <p className='text-4xl font-[800]'>1 Month</p>
-          <div>
-            <span>$19.9</span>
-            <span>$13.9</span>
-            <p>Starting From</p>
-          </div>
-          <ul>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-          </ul>
-        </div>
-        <div className='bg-white border border-[#F14E00]'>
-          <p className='text-[#F14E00] text-2xl font-semibold'>PREMIUM IPTV</p>
-          <p className='text-4xl font-[800]'>1 Month</p>
-          <div>
-            <span>$19.9</span>
-            <span>$13.9</span>
-            <p>Starting From</p>
-          </div>
-          <ul>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-            <li className='flex items-center gap-1'> <IoMdCheckboxOutline /> + 18000 Live IPTV Channels</li>
-          </ul>
-        </div>
+        ))}
+      </div>
+
+      <div className='h-5'></div>
+      <BannerSlider
+        height="70px"
+        data={image}
+        width="100%"
+        preview={6}
+        spacing={2}
+        loop={false}
+        duration={600} />
+      <div className='mt-8'>
+        <p className='text-sm text-white md:text-3xl font-semibold text-center'>
+          Live TV: Your Destination for Sports, News, and Entertainment!
+        </p>
+        <p className='text-[#F14E00] text-sm md:text-3xl font-semibold text-center'>
+          Access Channels from Every Country Worldwide
+        </p>
+        <Image className='w-[75%] m-auto object-fit mt-2' src={type_of_chnl} alt='' />
+      </div>
+    </div>
+    <div className='flex justify-center flex-col items-center gap-2 mt-8'>
+      <p className='text-white text-sm md:text-3xl font-semibold text-center'>
+        IPTV Service Reviews: What Our Customers Say
+      </p>
+      <button type="button"
+        className="text-white bg-blue-700 hover:bg-blue-800
+       focus:ring-4 focus:ring-blue-300 rounded-3xl 
+       text-sm px-8 py-3.5 dark:focus:ring-blue-800">
+        Get Discount
+      </button>
+      <div className='flex flex-wrap justify-center gap-1 w-[80%] mb-8'>
+        {/* <Image className='object-fit w-[220px]  rounded-sm' src={chat1} alt='chat'/> */}
+        <Image className='object-fit w-[230px]  rounded-md' src={chat2} alt='chat' />
+        <Image className='object-fit w-[230px]  rounded-md' src={chat3} alt='chat' />
+        <Image className='object-fit w-[230px]  rounded-md' src={chat4} alt='chat' />
+        <Image className='object-fit w-[230px]  rounded-md' src={chat5} alt='chat' />
       </div>
     </div>
   </>
