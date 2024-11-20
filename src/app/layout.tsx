@@ -3,6 +3,7 @@ import "./globals.css";
 import { Lato } from 'next/font/google'
 import Header from "@/components/base/Header";
 import Footer from "@/components/base/Footer"
+import WhatsaapConnect from "@/components/common/WhatsaapConnect";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header/>
         <main>
             {children}
+            <WhatsaapConnect/>
         </main>
         <Footer/>
       </body>

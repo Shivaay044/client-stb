@@ -18,6 +18,7 @@ import chat2 from "@/utils/Image/whatsappchat/chat2.jpg";
 import chat3 from "@/utils/Image/whatsappchat/chat3.jpg";
 import chat4 from "@/utils/Image/whatsappchat/chat4.jpg";
 import chat5 from "@/utils/Image/whatsappchat/chat5.jpg";
+import { useRouter } from 'next/navigation';
 
 type Pricing = {
   orgPrice: string;
@@ -28,6 +29,8 @@ type Pricing = {
 
 
 export default function Landing() {
+
+  const {push} = useRouter();
 
   const image: StaticImageData[] = [
     poster_2,
@@ -138,7 +141,7 @@ export default function Landing() {
           <p className='md:w-3/4 w-[90%] text-white text-center mt-6 md:mt-4 m-auto'>
             Dive into a world of over 21,000 live TV channels, 25,000 movies, and 19,000 TV shows—all in breathtaking 4K quality. Whether you are at home or on the go, stream effortlessly across any device—smart TVs, Android boxes, PCs, tablets, and smartphones. Experience seamless IPTV access with unmatched flexibility and interactive features, so you can enjoy your favorite content, anytime, anywhere.
           </p>
-          <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-8 py-3.5 dark focus:outline-none dark:focus:ring-blue-800 relative top-12">Free Trial</button>
+          <button onClick={()=>{push("/free-trail")}} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-8 py-3.5 dark focus:outline-none dark:focus:ring-blue-800 relative top-12">Free Trial</button>
         </div>
       </div>
 
