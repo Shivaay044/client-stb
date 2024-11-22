@@ -3,13 +3,31 @@ import React from 'react';
 import style from "./Landing.module.css";
 import { Typewriter } from 'react-simple-typewriter';
 import BannerSlider from './BannerSlider';
-import poster_1 from "@/utils/Image/professional-suspense-movie-poster_1.avif"
-import poster_2 from "@/utils/Image/halloween-make-up-woman-triangle-glitch-effect_2.avif"
-import poster_3 from "@/utils/Image/new-movie_3.jpg"
+import poster_1 from "@/utils/Image/movies/Do Patti.jpg"
+import poster_2 from "@/utils/Image/movies/Dil Kabaddi.jpg"
+import poster_3 from "@/utils/Image/movies/Palasa 1978.jpg"
+import poster_4 from "@/utils/Image/movies/The Goat Life.jpg";
+import poster_5 from "@/utils/Image/movies/Maharaja.jpg";
+import poster_6 from "@/utils/Image/movies/stree 2.jpg";
+import poster_7 from "@/utils/Image/movies/Deadpool & Wolverine.jpg";
+import poster_8 from "@/utils/Image/movies/kalki.jpg";
+import poster_9 from "@/utils/Image/movies/Venom.jpg";
+import poster_10 from "@/utils/Image/movies/sex  education.jpg";
+import poster_11 from "@/utils/Image/movies/Top Gun Maverick.jpg";
+import poster_12 from "@/utils/Image/movies/lagaan.jpg";
+import poster_13 from "@/utils/Image/movies/3 idiots.jpg";
+import poster_14 from "@/utils/Image/movies/Squid Game.jpg";
+import poster_15 from "@/utils/Image/movies/boiling point.jpg";
 import benifit_1 from "@/utils/Image/people-watching-movie-home_23-2148565277.png";
 import benifit_2 from "@/utils/Image/multiple_screen.avif";
 import benifit_3 from "@/utils/Image/working-with-servers_335657-2440.avif";
 import tvBannerwithChannel from "@/utils/Image/tvBannerwithChannel.png"
+import channel1 from '@/utils/Image/channel/gotv.png';
+import channel2 from '@/utils/Image/channel/hotstar.png';
+import channel3 from '@/utils/Image/channel/cnn.png';
+import channel4 from '@/utils/Image/channel/cnbc.png';
+import channel5 from '@/utils/Image/channel/hotstar.png';
+import channel6 from '@/utils/Image/channel/zee.png';
 import Image, { StaticImageData } from 'next/image';
 import { IoMdCheckboxOutline } from "react-icons/io";
 import type_of_chnl from "@/utils/Image/type_of _chnl.jpg";
@@ -33,21 +51,21 @@ export default function Landing() {
   const {push} = useRouter();
 
   const image: StaticImageData[] = [
-    poster_2,
-    poster_3,
-    poster_2,
-    poster_1,
-    poster_2,
-    poster_2,
-    poster_3,
-    poster_2,
     poster_1,
     poster_2,
     poster_3,
-    poster_2,
-    poster_1,
-    poster_3,
-    poster_2,
+    poster_4,
+    poster_5,
+    poster_6,
+    poster_7,
+    poster_8,
+    poster_9,
+    poster_10,
+    poster_11,
+    poster_12,
+    poster_13,
+    poster_14,
+    poster_15
   ]
 
   const Pricing: Pricing[] = [
@@ -123,6 +141,15 @@ export default function Landing() {
     }
   ]
 
+  const channel: StaticImageData[] = [
+        channel1,
+        channel2,
+        channel3,
+        channel4,
+        channel5,
+        channel6
+  ]
+
   return (<>
     <div className='relative w-full h-screen'>
       <div className={`${style.landingPageImg} w-full h-full absolute`}>
@@ -146,21 +173,20 @@ export default function Landing() {
       </div>
 
     </div>
-    <hr className='border border-[#7d7d7d]' />
-    <div className="my-0.5">
+    <div className="my-0.5 mb-4">
       <BannerSlider
-        height="100px"
-        data={image}
+        height="60px"
+        data={channel}
         width="100%"
-        preview={6}
-        spacing={2}
+        preview={4}
+        spacing={4}
         loop={true}
         duration={5000}
       />
     </div>
     <BannerSlider
       height="270px"
-      data={image}
+      data={image.slice(0,8)}
       width="100%"
       preview={6}
       spacing={2}
@@ -170,7 +196,7 @@ export default function Landing() {
     <p className='text-sm md:text-3xl text-white font-semibold p-4 text-center'>Premium 4K IPTV Channels & Movie Streaming Sources</p>
     <BannerSlider
       height="270px"
-      data={image}
+      data={image.slice(8,15)}
       width="100%"
       preview={6}
       spacing={2}
