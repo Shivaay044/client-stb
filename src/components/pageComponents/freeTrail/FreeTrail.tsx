@@ -52,11 +52,12 @@ export default function FreeTrail() {
             };
 
             await emailjs.send(
-                "service_t5ip30w", 
-                "template_jxljn4g",      
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,    
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 templateParams,
-                "NqT3Rkz0YpDF-uTzh"
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             );
+
             reset();    
             alert("Email sent successfully!");
         } catch (error) {
