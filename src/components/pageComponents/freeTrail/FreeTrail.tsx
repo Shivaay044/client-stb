@@ -3,11 +3,69 @@ import Image from 'next/image';
 import React from 'react';
 import freeTrailImg from "@/utils/Image/free_trial.jpg";
 import multiple_Screen from "@/utils/Image/multiple_screen.avif";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css';
+import { useForm } from 'react-hook-form';
+import zod, { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import emailjs from '@emailjs/browser'; 
+
+const Validate = zod.object({
+    name: z.string(),
+    mobileno:z.string(),
+    email:z.string(),
+    device:z.string(),
+    english:z.boolean(),
+    american:z.boolean(),
+    european:z.boolean(),
+    arabian:z.boolean(),
+    asian:z.boolean(), 
+    others:z.boolean(),
+})
+
+
 
 
 export default function FreeTrail() {
+
+    const {handleSubmit,register,reset} = useForm<z.infer<typeof Validate>>({resolver:zodResolver(Validate)});
+
+    const onSubmit = async (data: z.infer<typeof Validate>) => {
+        console.log(data,"check")
+        try {
+            const channels = [
+                data.english && "English",
+                data.american && "American",
+                data.european && "European",
+                data.arabian && "Arabian",
+                data.asian && "Asian",
+                data.others && "Others",
+            ]
+                .filter(Boolean)
+                .join(", ");
+    
+            const templateParams = {
+                name: data.name,
+                mobileno: data.mobileno,
+                email: data.email,
+                device: data.device,
+                channels: channels || "None",
+            };
+
+            await emailjs.send(
+                "service_t5ip30w", 
+                "template_jxljn4g",      
+                templateParams,
+                "NqT3Rkz0YpDF-uTzh"
+            );
+            reset();    
+            alert("Email sent successfully!");
+        } catch (error) {
+            console.error("Failed to send email:", error);
+            alert("Failed to send email. Please try again.");
+        }
+    };
+    
+ 
     return (
         <>
             <div className='relative h-screen w-full'>
@@ -23,32 +81,30 @@ export default function FreeTrail() {
             </div>
             <div className='flex flex-wrap justify-cente'>
                 <Image className='object-fit' src={multiple_Screen} alt={"Free Trail"} />
-                <form className='w-full md:w-1/2 m-4'>
+                <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-1/2 m-4'>
                     <div className='flex flex-col w-full gap-2'>
                         <label className='font-bold' htmlFor="name">Name <span className='text-red-500'>*</span></label>
-                        <input required className='border rounded-md p-2' name='name' type="text" placeholder='type your name' />
+                        <input {...register("name")} required className='border rounded-md p-2' name='name' type="text" placeholder='type your name' />
                     </div>
                     <div className='flex flex-col w-full gap-2 mt-2'>
                         <label className='font-bold' htmlFor="">Whatsapp (Phone Number) <span className='text-red-500'>*</span></label>
-                        <PhoneInput
+                        <input
+                           required
+                           placeholder='type number'
+                           type="tel"
                             className='border rounded-md p-2'
-                            defaultCountry='IN'
-                            onChange={()=>{}}
+                            {...register("mobileno")}
                           />
                     </div>
                     <div className='flex flex-col w-full gap-2 mt-2'>
-                        <label className='font-bold' htmlFor="name">Name <span className='text-red-500'>*</span></label>
-                        <input className='border rounded-md p-2' name='name' type="text" placeholder='type your name' />
-                    </div>
-                    <div className='flex flex-col w-full gap-2 mt-2'>
                         <label className='font-bold' htmlFor="email">Email <span className='text-red-500'>*</span></label>
-                        <input id='email' className='border rounded-md p-2' name='email' type="email" placeholder='type your name' />
+                        <input required {...register("email")} id='email' className='border rounded-md p-2' name='email' type="email" placeholder='type your name' />
                     </div>
                     <div className='flex flex-col w-full gap-2 mt-2'>
                         <label className='font-bold' htmlFor="device">Device <span className='text-red-500'>*</span></label>
-                        <select className='border rounded-md p-2' name="device" id="device">
-                            <option value="" selected>Choose the right device</option>
-                            <option value="Amazone Fire Stick">Amazone Fire Stick</option>
+                        <select required {...register("device")} className='border rounded-md p-2' name="device" id="device">
+                            <option value="">Choose the right device</option>
+                            <option value="Amazon Fire Stick">Amazon Fire Stick</option>
                             <option value="Smart TVs">Smart TVs</option>
                             <option value="Android boxes">Android boxes</option>
                             <option value="Apple devices">Apple devices</option>
@@ -61,21 +117,21 @@ export default function FreeTrail() {
                     <div className='flex flex-col w-full gap-2 mt-2'>
                        <label className='font-bold' htmlFor="device">Customize Channel <span className='text-red-500'>*</span></label>
                        <div className='flex gap-2'>
-                          <input type="checkbox" name="" id="Only English Channels" />
+                          <input {...register("english")} type="checkbox" id="Only English Channels" />
                           <label htmlFor="Only English Channels">Only English Channels</label>
-                          <input type="checkbox" name="" id="American" />
+                          <input {...register("american")} type="checkbox" id="American" />
                           <label htmlFor="American">American</label>
-                          <input type="checkbox" name="" id="European" />
+                          <input {...register("european")} type="checkbox" id="European" />
                           <label htmlFor="European">European</label>
-                          <input type="checkbox" name="" id="Arabian" />
+                          <input {...register("arabian")} type="checkbox" id="Arabian" />
                           <label htmlFor="Arabian">Arabian</label>
-                          <input type="checkbox" name="" id="Asian" />
+                          <input {...register("asian")} type="checkbox" id="Asian" />
                           <label htmlFor="Asian">Asian</label>
-                          <input type="checkbox" name="" id="Others" />
+                          <input {...register("others")} type="checkbox" id="Others" />
                           <label htmlFor="Others">Others</label>
                        </div>
-                    </div>
-                    <input className=" mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800" type="submit" value="Start Trail" />
+                        </div>
+                    <input className="mt-2 text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800" type="submit" value="Start Trail" />
                 </form>
             </div>
         </>
