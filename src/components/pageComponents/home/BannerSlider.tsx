@@ -25,6 +25,15 @@ export default function BannerSlider({height="100px",data, width,preview=2,spaci
     loop:loop,
     defaultAnimation:{
         duration:duration
+    },
+    breakpoints: {
+      '(max-width: 500px)': {
+        loop:true,
+        slides: {
+          perView: 3,
+          spacing: 2,
+        },
+      },
     }
   },[
     (slider) => {

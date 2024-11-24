@@ -4,12 +4,14 @@ import React, { useState } from 'react';
 import logo from "@/utils/Image/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import Link from 'next/link';
 
 
 export default function Header() {
-   const [hameburger, setHameBurger] = useState<boolean>(true)
+   const [hameburger, setHameBurger] = useState<boolean>(true);
+
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 md:p-2 fixed top-0 items-center top-6 md:top-1 z-10 w-full'>
+    <div className='grid grid-cols-1 md:grid-cols-2 md:p-2 fixed top-0 items-center z-10 w-full'>
          <div className='flex justify-between items-center'>
          <Image className='ms-5 h-22 md:h-25 w-40' src={logo} alt='logo'/>
          <FiMenu onClick={()=>{setHameBurger(false)}} className={`${hameburger?"":"hidden"} text-white font-bold text-4xl me-5 md:hidden`} />
@@ -33,7 +35,7 @@ export default function Header() {
                <div className='absolute bg-[#F14E00] duration-700 ease-in-out h-[3px] w-0 transition-all group-hover:w-full'></div>
             </li>
             <li>
-            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800">Free Trial</button>
+            <Link href={"/free-trail"} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800">Free Trial</Link>
             </li>
          </ul>
     </div>

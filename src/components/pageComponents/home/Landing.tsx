@@ -28,10 +28,15 @@ import channel3 from '@/utils/Image/channel/cnn.png';
 import channel4 from '@/utils/Image/channel/cnbc.png';
 import channel5 from '@/utils/Image/channel/hotstar.png';
 import channel6 from '@/utils/Image/channel/zee.png';
+import payment1 from '@/utils/Image/payment/visa.png';
+import payment2 from '@/utils/Image/payment/apple-pay.png';
+import payment3 from '@/utils/Image/payment/paypal.png';
+import payment4 from '@/utils/Image/payment/google-pay.png';
+import payment5 from '@/utils/Image/payment/stripe.png';
+import payment6 from '@/utils/Image/payment/american-express.png';
 import Image, { StaticImageData } from 'next/image';
 import { IoMdCheckboxOutline } from "react-icons/io";
 import type_of_chnl from "@/utils/Image/type_of _chnl.jpg";
-// import chat1 from "@/utils/Image/whatsappchat/chat1.jpg";
 import chat2 from "@/utils/Image/whatsappchat/chat2.jpg";
 import chat3 from "@/utils/Image/whatsappchat/chat3.jpg";
 import chat4 from "@/utils/Image/whatsappchat/chat4.jpg";
@@ -150,6 +155,15 @@ export default function Landing() {
         channel6
   ]
 
+  const payment: StaticImageData[] = [
+       payment1,
+       payment2,
+       payment3,
+       payment4,
+       payment5,
+       payment6,
+  ]
+
   return (<>
     <div className='relative w-full h-screen'>
       <div className={`${style.landingPageImg} w-full h-full absolute`}>
@@ -179,7 +193,7 @@ export default function Landing() {
         data={channel}
         width="100%"
         preview={4}
-        spacing={4}
+        spacing={8}
         loop={true}
         duration={5000}
       />
@@ -206,17 +220,17 @@ export default function Landing() {
     <p className='text-sm md:text-2xl font-semibold text-center text-[#F14E00]'>Continuously Updating</p>
     <div className='flex flex-wrap justify-center lg:flex-nowrap gap-6 mt-12'>
       <div>
-        <Image className='m-auto h-28' src={benifit_1} alt='' />
-        <p className='text-sm md:text-xl text-white font-semibold text-center'>High-Speed and Reliable Streaming Technology</p>
-        <p className='text-xs md:text-sm text-white text-center w-[80%] m-auto mt-'>
-          A Team of Experienced Engineers with Over 9 Years of Expertise. Enjoy Buffer-Free, Freeze-Free Streaming – Our IPTV Service is Up 99.99% of the Time!
-        </p>
-      </div>
-      <div>
         <Image className='h-28 w-36 m-auto rounded-xl' src={benifit_2} alt='' />
         <p className='text-sm md:text-xl text-white font-semibold text-center'>Benefits of Multiple Connections</p>
         <p className='text-xs md:text-sm text-white text-center w-[80%] m-auto'>
           With a multiScreen account, you will be able to enjoy TV on many devices at a time without any interruption.
+        </p>
+      </div> 
+      <div>
+      <Image className='m-auto h-28' src={benifit_1} alt='' />
+        <p className='text-sm md:text-xl text-white font-semibold text-center'>High-Speed and Reliable Streaming Technology</p>
+        <p className='text-xs md:text-sm text-white text-center w-[80%] m-auto mt-'>
+          A Team of Experienced Engineers with Over 9 Years of Expertise. Enjoy Buffer-Free, Freeze-Free Streaming – Our IPTV Service is Up 99.99% of the Time!
         </p>
       </div>
       <div>
@@ -279,10 +293,10 @@ export default function Landing() {
       <div className='h-5'></div>
       <BannerSlider
         height="70px"
-        data={image}
+        data={payment}
         width="100%"
-        preview={6}
-        spacing={2}
+        preview={5}
+        spacing={4}
         loop={false}
         duration={600} />
       <div className='mt-8'>
