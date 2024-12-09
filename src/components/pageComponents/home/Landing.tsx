@@ -3,44 +3,44 @@ import React from 'react';
 import style from "./Landing.module.css";
 import { Typewriter } from 'react-simple-typewriter';
 import BannerSlider from './BannerSlider';
-import poster_1 from "@/utils/Image/movies/Do Patti.jpg"
-import poster_2 from "@/utils/Image/movies/Dil Kabaddi.jpg"
-import poster_3 from "@/utils/Image/movies/Palasa 1978.jpg"
-import poster_4 from "@/utils/Image/movies/The Goat Life.jpg";
-import poster_5 from "@/utils/Image/movies/Maharaja.jpg";
-import poster_6 from "@/utils/Image/movies/stree 2.jpg";
-import poster_7 from "@/utils/Image/movies/Deadpool & Wolverine.jpg";
-import poster_8 from "@/utils/Image/movies/kalki.jpg";
-import poster_9 from "@/utils/Image/movies/Venom.jpg";
-import poster_10 from "@/utils/Image/movies/sex  education.jpg";
-import poster_11 from "@/utils/Image/movies/Top Gun Maverick.jpg";
-import poster_12 from "@/utils/Image/movies/lagaan.jpg";
-import poster_13 from "@/utils/Image/movies/3 idiots.jpg";
-import poster_14 from "@/utils/Image/movies/Squid Game.jpg";
-import poster_15 from "@/utils/Image/movies/boiling point.jpg";
-import benifit_1 from "@/utils/Image/people-watching-movie-home_23-2148565277.png";
-import benifit_2 from "@/utils/Image/multiple_screen.avif";
-import benifit_3 from "@/utils/Image/working-with-servers_335657-2440.avif";
-import tvBannerwithChannel from "@/utils/Image/tvBannerwithChannel.png"
-import channel1 from '@/utils/Image/channel/gotv.png';
-import channel2 from '@/utils/Image/channel/hotstar.png';
-import channel3 from '@/utils/Image/channel/cnn.png';
-import channel4 from '@/utils/Image/channel/cnbc.png';
-import channel5 from '@/utils/Image/channel/hotstar.png';
-import channel6 from '@/utils/Image/channel/zee.png';
-import payment1 from '@/utils/Image/payment/visa.png';
-import payment2 from '@/utils/Image/payment/apple-pay.png';
-import payment3 from '@/utils/Image/payment/paypal.png';
-import payment4 from '@/utils/Image/payment/google-pay.png';
-import payment5 from '@/utils/Image/payment/stripe.png';
-import payment6 from '@/utils/Image/payment/american-express.png';
+import poster_1 from "@/../public/Image/movies/Do Patti.jpg"
+import poster_2 from "@/../public/Image/movies/Dil Kabaddi.jpg"
+import poster_3 from "@/../public/Image/movies/Palasa 1978.jpg"
+import poster_4 from "@/../public/Image/movies/The Goat Life.jpg";
+import poster_5 from "@/../public/Image/movies/Maharaja.jpg";
+import poster_6 from "@/../public/Image/movies/stree 2.jpg";
+import poster_7 from "@/../public/Image/movies/Deadpool & Wolverine.jpg";
+import poster_8 from "@/../public/Image/movies/kalki.jpg";
+import poster_9 from "@/../public/Image/movies/Venom.jpg";
+import poster_10 from "@/../public/Image/movies/sex  education.jpg";
+import poster_11 from "@/../public/Image/movies/Top Gun Maverick.jpg";
+import poster_12 from "@/../public/Image/movies/lagaan.jpg";
+import poster_13 from "@/../public/Image/movies/3 idiots.jpg";
+import poster_14 from "@/../public/Image/movies/Squid Game.jpg";
+import poster_15 from "@/../public/Image/movies/boiling point.jpg";
+import benifit_1 from "@/../public/Image/people-watching-movie-home_23-2148565277.png";
+import benifit_2 from "@/../public/Image/multiple_screen.avif";
+import benifit_3 from "@/../public/Image/working-with-servers_335657-2440.avif";
+import tvBannerwithChannel from "@/../public/Image/tvBannerwithChannel.png"
+import channel1 from '@/../public/Image/channel/gotv.png';
+import channel2 from '@/../public/Image/channel/hotstar.png';
+import channel3 from '@/../public/Image/channel/cnn.png';
+import channel4 from '@/../public/Image/channel/cnbc.png';
+import channel5 from '@/../public/Image/channel/hotstar.png';
+import channel6 from '@/../public/Image/channel/zee.png';
+import payment1 from '@/../public/Image/payment/visa.png';
+import payment2 from '@/../public/Image/payment/apple-pay.png';
+import payment3 from '@/../public/Image/payment/paypal.png';
+import payment4 from '@/../public/Image/payment/google-pay.png';
+import payment5 from '@/../public/Image/payment/stripe.png';
+import payment6 from '@/../public/Image/payment/american-express.png';
 import Image, { StaticImageData } from 'next/image';
 import { IoMdCheckboxOutline } from "react-icons/io";
-import type_of_chnl from "@/utils/Image/type_of _chnl.jpg";
-import chat2 from "@/utils/Image/whatsappchat/chat2.jpg";
-import chat3 from "@/utils/Image/whatsappchat/chat3.jpg";
-import chat4 from "@/utils/Image/whatsappchat/chat4.jpg";
-import chat5 from "@/utils/Image/whatsappchat/chat5.jpg";
+import type_of_chnl from "@/../public/Image/type_of _chnl.jpg";
+import chat2 from "@/../public/Image/whatsappchat/chat2.jpg";
+import chat3 from "@/../public/Image/whatsappchat/chat3.jpg";
+import chat4 from "@/../public/Image/whatsappchat/chat4.jpg";
+import chat5 from "@/../public/Image/whatsappchat/chat5.jpg";
 import { useRouter } from 'next/navigation';
 
 type Pricing = {
@@ -79,13 +79,14 @@ export default function Landing() {
       disPrice: "$11",
       duration: "1 Month",
       benifits: [
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
       ]
     },
     {
@@ -93,13 +94,14 @@ export default function Landing() {
       disPrice: "$29.99",
       duration: "3 Month",
       benifits: [
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
       ]
     },
     {
@@ -107,41 +109,61 @@ export default function Landing() {
       disPrice: "$47.99",
       duration: "6 Month",
       benifits: [
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
       ]
     },
     {
-      orgPrice: "$119.99",
+      orgPrice: "$139.99",
       disPrice: "$71.99",
       duration: "12 Month",
       benifits: [
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
       ]
     },
     {
-      orgPrice: "$129.99",
+      orgPrice: "$149.99",
       disPrice: "$77.99",
       duration: "12 month All TV + Adult Section",
       benifits: [
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
-        "+ 18000 Live IPTV Channels",
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
+        "+ Adults channels"
+      ]
+    },
+    {
+      orgPrice: "$159.99",
+      disPrice: "$77.99",
+      duration: "1 year with 15 + themes and with adult",
+      benifits: [
+        "+ 23000+ live channels",
+        "+ 90000+ VOD TV shows & Movies",
+        "+ 6000 live Sports channels",
+        "+ High-quality HD, 4k",
+        "+ Auto update",
+        "+ Easy installation and stable",
+        "+ EPG guide",
+        "+ Technical Assistance & support 24/7",
+        "+ Adults channels"
       ]
     }
   ]
@@ -261,21 +283,21 @@ export default function Landing() {
       <p className='text-[#F14E00] text-sm md:text-3xl font-semibold p-4 text-center'>
         Shop Risk-Free with Our 14-Day Money-Back Guarantee!
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 p-4">
+      <div id='Pricing' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 p-6">
         {Pricing.map((item: Pricing, idx) => (
           <div
             key={idx}
             className="mx-auto bg-white border border-[#F14E00] rounded-3xl py-4 text-center box-border hover:shadow-[0_0_0_8px_#F14E00] w-full max-w-xs">
             <p className="text-[#F14E00] text-xl font-semibold">PREMIUM IPTV</p>
-            <p className="flex items-center justify-center text-md h-14 m-1 font-[900]">{item.duration}</p>
+            <p className="flex items-center justify-center text-md h-12 m-1 font-[900]">{item.duration}</p>
             <div className="mt-2 bg-[#CBDCEB] w-full py-2">
-              <span className="line-through text-xl mx-2">{item.orgPrice}</span>
-              <span className="text-[#F14E00] text-2xl">{item.disPrice}</span>
+              <span className="text-xl mx-2">{item.orgPrice}</span>
+              {/* <span className="text-[#F14E00] text-2xl">{item.disPrice}</span> */}
               <p className="text-slate-600">Starting From</p>
             </div>
-            <ul className=" mt-4 flex flex-col gap-1">
+            <ul className="mt-4 flex flex-col gap-1 p-3">
               {item.benifits.map((description: string, idx: number) => (
-                <li key={idx} className="flex items-center justify-center gap-1 text-xs p-1">
+                <li key={idx} className="flex items-center justify-start gap-1 text-xs p-1 ">
                   <IoMdCheckboxOutline className="text-[#F14E00]" />
                   {description}
                 </li>
@@ -283,6 +305,7 @@ export default function Landing() {
             </ul>
             <button
               type="button"
+              onClick={()=>window.location.href = "https://forms.gle/QKqW3JigSZz5yZrD6"}
               className="mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-3xl text-sm px-6 py-2.5 dark:focus:ring-blue-800">
               Buy Now
             </button>

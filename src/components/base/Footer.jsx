@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from "../../utils/Image/logo.png"
+import logo from "../../../public/Image/logo.png"
 
 export default function Footer() {
   return (
@@ -26,7 +26,10 @@ export default function Footer() {
         <ul className='mt-5 text-xs md:text-sm lg:text-xl font-bold cursor-pointer'>
               <li className='text-[#F14E00]'>Get In Touch</li>
               <li className='mt-3 h-3'>
-                <span className='font-bold'>Email: </span>quicktvsolutions@gmail.com
+                <span className='font-bold'>Email: </span>Sales@quicktvsolutions.com
+              </li>
+              <li className='mt-3 h-3'>
+                <span className='font-bold'>Contact: </span>+91 9046188055
               </li>
             </ul>
         </div>

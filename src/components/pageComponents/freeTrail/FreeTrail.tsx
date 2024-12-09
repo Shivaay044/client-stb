@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image';
 import React from 'react';
-import freeTrailImg from "@/utils/Image/free_trial.jpg";
-import multiple_Screen from "@/utils/Image/multiple_screen.avif";
+import freeTrailImg from "@/../public/Image/free_trial.jpg"; 
+import multiple_Screen from "@/../public/Image/multiple_screen.avif";
 import 'react-phone-number-input/style.css';
 import { useForm } from 'react-hook-form';
 import zod, { z } from "zod";

@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState } from 'react';
-import logo from "@/utils/Image/logo.png";
+import logo from "../../../public/Image/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export default function Header() {
    const [hameburger, setHameBurger] = useState<boolean>(true);
    const path: Path[] = [
       { id: "home", link: "/", title: "Home" },
-      { id: "price", link: "/price", title: "Price" },
+      { id: "price", link: "#Pricing", title: "Price" },
       { id: "channelList", link: "/channel-list", title: "Channel List" },
       { id: "about", link: "/about", title: "About" },
    ]
