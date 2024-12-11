@@ -23,15 +23,15 @@ export default function Header() {
    ]
 
    return (
-      <div className={`grid grid-cols-1 md:grid-cols-2 md:p-2 fixed top-0 items-center z-10 w-full ${hameburger ? "" : "bg-[#0000Ff20]"}`}>
-         <div className='flex justify-between items-center'>
+      <div className={`flex flex-col md:flex-row fixed top-0 z-10 w-full ${hameburger ? "" : "bg-[#0000Ff20] h-screen"}`}>
+         <div className='flex justify-between items-center md:w-1/2'>
              <Link href="/">
                    <Image className='ms-5 h-22 md:h-25 w-40' src={logo} alt='logo' />
              </Link>
             <FiMenu onClick={() => { setHameBurger(false) }} className={`${hameburger ? "" : "hidden"} text-white font-bold text-4xl me-5 md:hidden`} />
             <IoClose onClick={() => { setHameBurger(true) }} className={`${hameburger == false ? "visible" : "hidden"} text-white font-bold text-4xl me-5 md:hidden`} />
          </div>
-         <ul className={`md:flex ${hameburger ? "hidden" : "visible"} flex-col w-full text-center justify-evenly md:flex-row gap-2 lg:gap-0 items-center cursor-pointer font-semibold text-[#F5F5F5] text-lg`}>
+         <ul className={`md:flex md:w-1/2 h-22 ${hameburger ? "hidden" : "visible"} flex-col w-full text-center justify-evenly md:flex-row gap-2 lg:gap-0 items-center cursor-pointer font-semibold text-[#F5F5F5] text-lg`}>
             {
                path.map((item: Path) => (
                   <Link key={item.id} onClick={()=>setHameBurger(true)} href={item.link}>

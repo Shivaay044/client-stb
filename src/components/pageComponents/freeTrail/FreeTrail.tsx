@@ -117,7 +117,7 @@ export default function FreeTrail() {
                     </div>
                     <div className='flex flex-col w-full gap-2 mt-2'>
                        <label className='font-bold' htmlFor="device">Customize Channel <span className='text-red-500'>*</span></label>
-                       <div className='flex gap-2'>
+                       <div className='flex flex-wrap gap-2'>
                           <input {...register("english")} type="checkbox" id="Only English Channels" />
                           <label htmlFor="Only English Channels">Only English Channels</label>
                           <input {...register("american")} type="checkbox" id="American" />
