@@ -17,7 +17,7 @@ export default function About() {
                 </p>
             </div>
         </div>
-        <div className='p-10 text-justify'>
+        <div className='p-10 text-justify bg-[#0001Ff20]'>
         <div className='md:w-[70%] m-auto'> 
               <p>
               Our IPTV service uses cutting-edge, stable streaming technology, allowing expats to enjoy TV channels from their home countries effortlessly.
