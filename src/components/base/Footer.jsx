@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import logo from "../../../public/Image/logo.png"
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -16,7 +17,11 @@ export default function Footer() {
         <div className='col-span-2 md:col-span-1 m-auto md:m-0'>
             <ul className='mt-5 text-xs md:text-sm lg:text-xl font-bold cursor-pointer '>
               <li className='text-[#F14E00]'>Need Help</li>
-              <li className='mt-3'>Contact</li>
+              <li className='mt-3'>
+                <Link href={"/contact"}>
+                   Contact
+                </Link>
+              </li>
               <li className='py-1'>Refund Policy</li>
               <li className='py-1'>Terms of Service</li>
               <li className='py-1'>Privacy Policy</li>
