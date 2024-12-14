@@ -22,7 +22,11 @@ export default function Footer() {
                    Contact
                 </Link>
               </li>
-              <li className='py-1'>Refund Policy</li>
+              <li className='py-1'>
+              <Link href={"/refund-policy"}>
+                   Refund Policy
+                </Link>
+              </li>
               <li className='py-1'>Terms of Service</li>
               <li className='py-1'>Privacy Policy</li>
             </ul>
