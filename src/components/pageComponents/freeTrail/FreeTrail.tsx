@@ -30,7 +30,6 @@ export default function FreeTrail() {
     const {handleSubmit,register,reset} = useForm<z.infer<typeof Validate>>({resolver:zodResolver(Validate)});
 
     const onSubmit = async (data: z.infer<typeof Validate>) => {
-        console.log(data,"check")
         try {
             const channels = [
                 data.english && "English",
@@ -132,7 +131,7 @@ export default function FreeTrail() {
                           <label htmlFor="Others">Others</label>
                        </div>
                         </div>
-                    <input className="mt-2 text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800" type="submit" value="Start Trail" />
+                    <input className="mt-2 text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 dark focus:outline-none dark:focus:ring-blue-800" type="submit" value="Start Trial" />
                 </form>
             </div>
         </>

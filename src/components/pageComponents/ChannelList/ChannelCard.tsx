@@ -14,11 +14,11 @@ function ChannelCard({ channel }: { channel: Channel[] }) {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-4">
+    <div className="grid lg:grid-cols-4 gap-4 p-4 grid-cols-2 md:grid-cols-3">
       {channel.map((item: Channel, id: number) => (
         <div
           key={id}
-          className={`relative text-center shadow-md rounded-2xl p-4 bg-white transition-all duration-300 ${
+          className={`relative text-center shadow-md rounded-2xl md:p-4 bg-white transition-all duration-300 p-2 ${
             openCardId === id ? "h-auto" : "h-40"
           }`}
           style={{
@@ -29,7 +29,7 @@ function ChannelCard({ channel }: { channel: Channel[] }) {
             <span className="text-md font-bold text-[#F14E00]">
               {item.title}
             </span>
-            <ul className="text-center">
+            <ul className="text-center font-bold">
               {/* Always display the first two items */}
               {item.ch_name.slice(0, 4).map((channel: string, idx: number) => (
                 <li key={idx}>{channel}</li>
